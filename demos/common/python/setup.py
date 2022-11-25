@@ -37,12 +37,13 @@ packages = find_packages(str(SETUP_DIR))
 package_dir = {'openvino': str(SETUP_DIR / 'openvino')}
 
 setup(
-    name='openmodelzoo-modelapi',
-    version='0.0.0',
+    name='otx-modelapi',
+    version='0.3.0',
     author='Intel® Corporation',
     license='OSI Approved :: Apache Software License',
     url='https://github.com/openvinotoolkit/open_model_zoo/tree/develop/demos/common/python/openvino',
     description='Model API: model wrappers and pipelines from Open Model Zoo',
+    long_description='Temporary PyPI package based on releases/2022/SCv1.1 branch',
     classifiers=[
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3',
@@ -50,5 +51,7 @@ setup(
     packages=packages,
     package_dir=package_dir,
     install_requires=required,
-    extras_require={'ovms': ovms_required}
+    extras_require={'ovms': ovms_required},
+    maintainer='Songki Choi',
+    maintainer_email='songkich.choi@intel.com',
 )
